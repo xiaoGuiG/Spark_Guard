@@ -1,7 +1,0 @@
-F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Development\SparkGuard\Definitions.SparkGuard.h
-F:\Spark_Guard\SparkGuard\Source\SparkGuard\SparkGuardGameModeBase.h
-F:\Epic\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-F:\Epic\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-F:\Epic\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-F:\Epic\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Inc\SparkGuard\SparkGuardGameModeBase.generated.h

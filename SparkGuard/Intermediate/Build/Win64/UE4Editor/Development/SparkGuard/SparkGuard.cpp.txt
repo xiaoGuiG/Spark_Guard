@@ -1,2 +1,0 @@
-F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Development\SparkGuard\Definitions.SparkGuard.h
-F:\Spark_Guard\SparkGuard\Source\SparkGuard\SparkGuard.h
