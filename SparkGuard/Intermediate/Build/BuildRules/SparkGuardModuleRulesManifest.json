@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"F:\\Spark_Guard\\SparkGuard\\Source\\SparkGuard\\SparkGuard.Build.cs",
+		"F:\\Spark_Guard\\SparkGuard\\Source\\SparkGuard.Target.cs",
+		"F:\\Spark_Guard\\SparkGuard\\Source\\SparkGuardEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

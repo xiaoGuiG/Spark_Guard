@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-SparkGuard.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\SparkGuardEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Development\SparkGuard\SparkGuard.cpp.obj"
+"F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Development\SparkGuard\SparkGuardGameModeBase.cpp.obj"
+"F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Development\SparkGuard\SparkGuard.init.gen.cpp.obj"
+"F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Development\SparkGuard\SparkGuardGameModeBase.gen.cpp.obj"
+"F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Development\SparkGuard\Default.rc2.res"
+/OUT:"F:\Spark_Guard\SparkGuard\Intermediate\Build\Win64\UE4Editor\Development\SparkGuard\UE4Editor-SparkGuard.lib"
