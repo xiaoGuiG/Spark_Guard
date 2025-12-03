@@ -13,5 +13,5 @@ UCLASS()
 class SPARKGUARD_API ASparkGuardGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+	//test
 };
