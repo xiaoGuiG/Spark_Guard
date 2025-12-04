@@ -5,35 +5,42 @@
     <projectFile>Intermediate/ProjectFiles/UE4.vcxproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba99fcc6-4ff1-4461-ab83-dc77b3bce7dc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="395ddcd0-3eea-460f-83c6-4b480c2859e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/SparkGuard.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/SparkGuard.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkGuard.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SparkGuard.uproject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/CharacterActors/GemstoneCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/CharacterActors/GemstoneCharacter.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="36LEoE3UrjtKWnsNBAzrhKqs3PP" />
+  <component name="ProjectId" id="36MaquPfuxAKRbupokTD7H8M5wp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C++ Project.SparkGuard">
     <configuration name="SparkGuard" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -251,12 +258,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ba99fcc6-4ff1-4461-ab83-dc77b3bce7dc" name="Changes" comment="" />
-      <created>1764777625352</created>
+      <changelist id="395ddcd0-3eea-460f-83c6-4b480c2859e1" name="Changes" comment="" />
+      <created>1764819089660</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1764777625352</updated>
-      <workItem from="1764777648832" duration="332000" />
+      <updated>1764819089660</updated>
+      <workItem from="1764819117886" duration="7681000" />
+      <workItem from="1764836189390" duration="637000" />
+      <workItem from="1764836917206" duration="1330000" />
+      <workItem from="1764840017479" duration="2069000" />
+      <workItem from="1764844764534" duration="2847000" />
     </task>
     <servers />
   </component>
