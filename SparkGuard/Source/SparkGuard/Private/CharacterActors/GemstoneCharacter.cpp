@@ -7,9 +7,14 @@
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "PaperFlipbook.h"
+#include "PaperFlipbookComponent.h"
 
 AGemstoneCharacter::AGemstoneCharacter()
 {
+	//启用Tick
+	PrimaryActorTick.bCanEverTick=true;
+	
 	//相机初始化
 	Arm=CreateDefaultSubobject<USpringArmComponent>(TEXT("Arm"));
 	Camera=CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
@@ -34,6 +39,12 @@ void AGemstoneCharacter::BeginPlay()
 	InputComponent->BindAxis(TEXT("MoveX"),this,&AGemstoneCharacter::GuardMoveRight);
 }
 
+void AGemstoneCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+	GuardMove();
+}
+
 void AGemstoneCharacter::GuardMoveUp(float AxisValue)
 {
 	AddMovementInput(FVector(0,AxisValue,0));
@@ -42,4 +53,16 @@ void AGemstoneCharacter::GuardMoveUp(float AxisValue)
 void AGemstoneCharacter::GuardMoveRight(float AxisValue)
 {
 	AddMovementInput(FVector(AxisValue,0,0));
+}
+
+void AGemstoneCharacter::GuardMove()
+{
+	if(GetCharacterMovement()->Velocity.IsZero())
+	{
+		GetSprite()->SetFlipbook(Idel_PFb);
+	}
+	else
+	{
+		GetSprite()->SetFlipbook(Run_PFb);
+	}
 }

@@ -16,6 +16,7 @@ class SPARKGUARD_API AGemstoneCharacter : public APaperCharacter
 public:
 	AGemstoneCharacter();
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
 
 	//相机组件
 	UPROPERTY(EditAnywhere)
@@ -26,5 +27,12 @@ public:
 	//角色移动
 	void GuardMoveUp(float AxisValue);
 	void GuardMoveRight(float AxisValue);
+	void GuardMove();
+
+	//PaperFlipbook资产
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Idel_PFb;
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Run_PFb;
 	
 };
