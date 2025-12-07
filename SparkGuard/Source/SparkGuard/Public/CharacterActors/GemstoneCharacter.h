@@ -34,5 +34,14 @@ public:
 	class UPaperFlipbook* Idel_PFb;
 	UPROPERTY(EditAnywhere)
 	class UPaperFlipbook* Run_PFb;
+
+	//子弹类
+	UPROPERTY(EditAnywhere,Category="Bullet")
+	TSubclassOf<class ABullet> BulletClass;
 	
+	//角色攻击
+	void GuardAttack();
+
+	//获取子弹运动方向
+	FVector GetAttackDir();
 };

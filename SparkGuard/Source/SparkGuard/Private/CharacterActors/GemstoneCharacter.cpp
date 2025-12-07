@@ -2,6 +2,10 @@
 
 
 #include "CharacterActors/GemstoneCharacter.h"
+#include "CharacterActors/GemstoneCharacter.h"
+#include "CharacterActors/GemstoneCharacter.h"
+#include "CharacterActors/GemstoneCharacter.h"
+#include "CharacterActors/GemstoneCharacter.h"
 
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -9,6 +13,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "PaperFlipbook.h"
 #include "PaperFlipbookComponent.h"
+#include "Bullet/Bullet.h"
+#include "GameModeBase/GuardController.h"
 
 AGemstoneCharacter::AGemstoneCharacter()
 {
@@ -35,8 +41,11 @@ AGemstoneCharacter::AGemstoneCharacter()
 void AGemstoneCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	//绑定轴映射
 	InputComponent->BindAxis(TEXT("MoveY"),this,&AGemstoneCharacter::GuardMoveUp);
 	InputComponent->BindAxis(TEXT("MoveX"),this,&AGemstoneCharacter::GuardMoveRight);
+	//绑定操作映射
+	InputComponent->BindAction(TEXT("Attack"),EInputEvent::IE_Pressed,this,&AGemstoneCharacter::GuardAttack);
 }
 
 void AGemstoneCharacter::Tick(float DeltaSeconds)
@@ -47,12 +56,12 @@ void AGemstoneCharacter::Tick(float DeltaSeconds)
 
 void AGemstoneCharacter::GuardMoveUp(float AxisValue)
 {
-	AddMovementInput(FVector(0,AxisValue,0));
+	AddMovementInput(FVector(0,AxisValue*0.2,0));
 }
 
 void AGemstoneCharacter::GuardMoveRight(float AxisValue)
 {
-	AddMovementInput(FVector(AxisValue,0,0));
+	AddMovementInput(FVector(AxisValue*0.2,0,0));
 }
 
 void AGemstoneCharacter::GuardMove()
@@ -65,4 +74,41 @@ void AGemstoneCharacter::GuardMove()
 	{
 		GetSprite()->SetFlipbook(Run_PFb);
 	}
+}
+
+void AGemstoneCharacter::GuardAttack()
+{
+
+	//生成子弹
+	FVector SpawnLoc=GetActorLocation();
+	FRotator SpawnRot=FRotator::ZeroRotator;
+	
+	FActorSpawnParameters Params;
+	Params.Owner=this;
+
+	ABullet* Bullet=GetWorld()->SpawnActor<ABullet>(BulletClass,SpawnLoc,SpawnRot,Params);
+	if(Bullet)
+	{
+		FVector Dir=GetAttackDir();
+		Bullet->InitBullet(Dir);
+	}
+}
+
+FVector AGemstoneCharacter::GetAttackDir()
+{
+	//获取初始生成位置
+	FVector SpawnLoc=GetActorLocation();
+	//获取鼠标世界位置
+	AGuardController* PC=Cast<AGuardController>(GetController());
+	if(!PC)return FVector::ZeroVector;
+	//鼠标在世界中的位置
+	float MouseX,MouseY;
+	PC->GetMousePosition(MouseX,MouseY);
+	FVector WorldPos,WorldRot;
+	PC->DeprojectScreenPositionToWorld(MouseX,MouseY,WorldPos,WorldRot);
+	//计算射击方向
+	FVector Dir=WorldPos-SpawnLoc;
+	Dir.Z=0;
+	Dir.Normalize();
+	return Dir;
 }
