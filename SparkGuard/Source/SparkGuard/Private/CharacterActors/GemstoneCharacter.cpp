@@ -80,8 +80,9 @@ void AGemstoneCharacter::GuardAttack()
 	//生成子弹
 	FVector SpawnLoc=GetActorLocation();
 	FRotator SpawnRot=FRotator::ZeroRotator;
-	
+	//配置子弹从属关系
 	FActorSpawnParameters Params;
+	Params.Instigator=this;
 	Params.Owner=this;
 
 	ABullet* Bullet=GetWorld()->SpawnActor<ABullet>(BulletClass,SpawnLoc,SpawnRot,Params);

@@ -39,4 +39,6 @@ public:
 	float LifeTime=4.f;
 	void DestroyActor();
 
+	
+
 };
