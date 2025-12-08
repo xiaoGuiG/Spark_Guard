@@ -7,11 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="395ddcd0-3eea-460f-83c6-4b480c2859e1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/BP_GemStone.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Actors/Bullets/BP_Bullet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/Actors/Bullets/BP_Bullet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Animations/Bullets/Bullet.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Maps/L_test.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/Maps/L_test.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Private/CharacterActors/GemstoneCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Private/CharacterActors/GemstoneCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Public/CharacterActors/GemstoneCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Public/CharacterActors/GemstoneCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/SparkGuard.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/SparkGuard.Build.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SparkGuard.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SparkGuard.uproject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +20,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/AI/AIContro.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/AI/BTService_FindPlayer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/Bullet/Bullet.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/CharacterActors/GemstoneCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/GameModeBase/GuardController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/AI.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/AIContro.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/BTService_FindPlayer.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/BTTask_FindPlayer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/Bullet/Bullet.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/CharacterActors/GemstoneCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/GameModeBase/GuardController.h" root0="FORCE_HIGHLIGHTING" />
@@ -284,7 +290,16 @@
       <workItem from="1765098041732" duration="122000" />
       <workItem from="1765098248269" duration="69000" />
       <workItem from="1765098468937" duration="204000" />
-      <workItem from="1765098736442" duration="2710000" />
+      <workItem from="1765098736442" duration="2932000" />
+      <workItem from="1765105592043" duration="1682000" />
+      <workItem from="1765111748428" duration="68000" />
+      <workItem from="1765111910051" duration="15000" />
+      <workItem from="1765112528926" duration="273000" />
+      <workItem from="1765113075087" duration="27000" />
+      <workItem from="1765113140910" duration="7318000" />
+      <workItem from="1765181872064" duration="710000" />
+      <workItem from="1765182762667" duration="187000" />
+      <workItem from="1765182998617" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="新增玩家移动功能">
       <created>1764854190395</created>
@@ -300,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1764856089765</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="新增射击功能">
+      <created>1765101577748</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765101577748</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +345,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="新增玩家移动功能" />
     <MESSAGE value="新增角色移动动画" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增角色移动动画" />
+    <MESSAGE value="新增射击功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增射击功能" />
   </component>
 </project>

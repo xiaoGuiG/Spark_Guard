@@ -2,10 +2,6 @@
 
 
 #include "CharacterActors/GemstoneCharacter.h"
-#include "CharacterActors/GemstoneCharacter.h"
-#include "CharacterActors/GemstoneCharacter.h"
-#include "CharacterActors/GemstoneCharacter.h"
-#include "CharacterActors/GemstoneCharacter.h"
 
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -51,21 +47,23 @@ void AGemstoneCharacter::BeginPlay()
 void AGemstoneCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+	//角色移动
 	GuardMove();
 }
 
 void AGemstoneCharacter::GuardMoveUp(float AxisValue)
 {
-	AddMovementInput(FVector(0,AxisValue*0.2,0));
+	AddMovementInput(FVector(0,AxisValue*0.4,0));
 }
 
 void AGemstoneCharacter::GuardMoveRight(float AxisValue)
 {
-	AddMovementInput(FVector(AxisValue*0.2,0,0));
+	AddMovementInput(FVector(AxisValue*0.4,0,0));
 }
 
 void AGemstoneCharacter::GuardMove()
 {
+	//移动动画切换
 	if(GetCharacterMovement()->Velocity.IsZero())
 	{
 		GetSprite()->SetFlipbook(Idel_PFb);
