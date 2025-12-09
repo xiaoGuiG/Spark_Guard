@@ -7,12 +7,23 @@
 #include "AI/AIContro.h"
 #include "Bullet/Bullet.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/WidgetComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 AAI::AAI()
 {
 	AIControllerClass=AAIContro::StaticClass();
 	AutoPossessAI=EAutoPossessAI::PlacedInWorldOrSpawned;
+
+	//创建血量UI组件
+	HPWidget=CreateDefaultSubobject<UWidgetComponent>(TEXT("HPWidget"));
+	HPWidget->SetupAttachment(GetSprite());
+
+	//设置HPWidget的属性
+	HPWidget->SetWidgetSpace(EWidgetSpace::Screen);//设置为屏幕UI模式
+	HPWidget->SetDrawSize(FVector2D(100,10));//设置大小
+	HPWidget->SetRelativeLocation(FVector(0,0,20));//调整位置
+	
 	
 	//禁用重力
 	GetCharacterMovement()->GravityScale=0;
@@ -33,6 +44,7 @@ AAI::AAI()
 void AAI::BeginPlay()
 {
 	Super::BeginPlay();
+	
 }
 
 void AAI::Tick(float DeltaSeconds)
@@ -49,6 +61,15 @@ void AAI::BulletHitEvent(UPrimitiveComponent* OverlappedComponent, AActor* Other
 	if(Bullet)
 	{
 		Bullet->Destroy();
-		Destroy();
+		TakeBulletDamage(1.f);
+		if(AIStats.CurrentHP==0.f)
+		{
+			Destroy();
+		}
 	}
+}
+
+void AAI::TakeBulletDamage(float Damage)
+{
+	AIStats.CurrentHP-=Damage;
 }

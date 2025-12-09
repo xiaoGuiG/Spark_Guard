@@ -34,8 +34,14 @@ public:
 	//碰撞检测
 	UFUNCTION()
 	void BulletHitEvent(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
-	
-protected:
+	//血量组件
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category="UI")
+	class UWidgetComponent* HPWidget;
+
+	//结构体
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Stats")
 	FAIStats AIStats;
+
+	//受伤函数
+	void TakeBulletDamage(float Damage);
 };
