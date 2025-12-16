@@ -45,6 +45,14 @@ void AAISpawner::SpawnAI()
 	FActorSpawnParameters Params;
 	Params.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 
-	GetWorld()->SpawnActor<AAI>(AIClass,NavLoc.Location,FRotator::ZeroRotator,Params);
+	if(SpawnCount>0)
+	{
+		AAI* NewAI=GetWorld()->SpawnActor<AAI>(AIClass,NavLoc.Location,FRotator::ZeroRotator,Params);
+		if(NewAI)
+		{
+			NewAI->OwnerSpawner=this;
+		}
+		SpawnCount--;
+	}
 }
 

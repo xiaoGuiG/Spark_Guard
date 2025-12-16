@@ -16,4 +16,12 @@ class SPARKGUARD_API ASparkGuardGameModeBase : public AGameModeBase
 public:
 	ASparkGuardGameModeBase();
 	virtual void BeginPlay() override;
+	
+	//游戏结束
+	UFUNCTION(BlueprintCallable)
+	void GameOver();
+
+	//游戏结束界面
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> GameOverWidgetClass;
 };

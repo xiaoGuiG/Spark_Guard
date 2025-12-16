@@ -61,4 +61,8 @@ public:
 	//攻击函数
 	void AttackGuard();
 	FTimerHandle AttackTimerHandle;
+
+	//获得生成AI类
+	UPROPERTY()
+	class AAISpawner* OwnerSpawner;
 };

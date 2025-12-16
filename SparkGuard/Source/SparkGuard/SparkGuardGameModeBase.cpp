@@ -3,6 +3,8 @@
 
 #include "SparkGuardGameModeBase.h"
 #include "CharacterActors/GemstoneCharacter.h"
+#include "Kismet/GameplayStatics.h"
+#include "Blueprint/UserWidget.h"
 
 ASparkGuardGameModeBase::ASparkGuardGameModeBase()
 {
@@ -16,4 +18,17 @@ ASparkGuardGameModeBase::ASparkGuardGameModeBase()
 void ASparkGuardGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
+}
+
+void ASparkGuardGameModeBase::GameOver()
+{
+	UGameplayStatics::SetGamePaused(GetWorld(),true);
+	if(GameOverWidgetClass)
+	{
+		UUserWidget* Widget=CreateWidget<UUserWidget>(GetWorld(),GameOverWidgetClass);
+		if(Widget)
+		{
+			Widget->AddToViewport();
+		}
+	}
 }

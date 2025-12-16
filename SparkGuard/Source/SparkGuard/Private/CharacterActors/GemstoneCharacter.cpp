@@ -11,6 +11,8 @@
 #include "PaperFlipbookComponent.h"
 #include "Bullet/Bullet.h"
 #include "GameModeBase/GuardController.h"
+#include "Kismet/GameplayStatics.h"
+#include "SparkGuard/SparkGuardGameModeBase.h"
 
 AGemstoneCharacter::AGemstoneCharacter()
 {
@@ -110,4 +112,13 @@ FVector AGemstoneCharacter::GetAttackDir()
 	Dir.Z=0;
 	Dir.Normalize();
 	return Dir;
+}
+
+void AGemstoneCharacter::IsDeath()
+{
+	ASparkGuardGameModeBase* GM=Cast<ASparkGuardGameModeBase>(UGameplayStatics::GetGameMode(GetWorld()));
+	if(GM)
+	{
+		GM->GameOver();
+	}
 }

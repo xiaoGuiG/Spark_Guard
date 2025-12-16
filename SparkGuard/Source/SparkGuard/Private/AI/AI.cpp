@@ -5,6 +5,7 @@
 
 #include "PaperFlipbookComponent.h"
 #include "AI/AIContro.h"
+#include "AI/AISpawner.h"
 #include "Bullet/Bullet.h"
 #include "CharacterActors/GemstoneCharacter.h"
 #include "Components/CapsuleComponent.h"
@@ -93,6 +94,10 @@ void AAI::BulletHitEvent(UPrimitiveComponent* OverlappedComponent, AActor* Other
 		if(AIStats.CurrentHP==0.f)
 		{
 			Destroy();
+			if(OwnerSpawner)
+			{
+				OwnerSpawner->SpawnCount++;
+			}
 		}
 	}
 }
@@ -107,6 +112,10 @@ void AAI::AttackGuard()
 	if(Guard)
 	{
 		Guard->GuardStats.CurrentHP-=1.f;
+	}
+	if(Guard->GuardStats.CurrentHP<=0.f)
+	{
+		Guard->IsDeath();
 	}
 }
 

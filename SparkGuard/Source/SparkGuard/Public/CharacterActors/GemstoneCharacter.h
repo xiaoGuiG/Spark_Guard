@@ -17,7 +17,7 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
 	float MaxHP=10.f;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
-	float CurrentHP=6.f;
+	float CurrentHP=10.f;
 }; 
  
 UCLASS()
@@ -59,4 +59,8 @@ public:
 	//Guard属性结构体
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Stats")
 	FGuardStats GuardStats;
+
+	//角色死亡
+	UFUNCTION()
+	void IsDeath();
 };
