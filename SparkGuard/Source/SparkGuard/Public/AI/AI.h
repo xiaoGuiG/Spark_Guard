@@ -31,17 +31,34 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 
-	//碰撞检测
+	//获取玩家类
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Player")
+	class AGemstoneCharacter* Guard;
+
+	//攻击检测碰撞体组件
+	UPROPERTY(EditAnywhere)
+	class USphereComponent* AttackDetectionComponent;
+
+	//攻击碰撞检测
+	UFUNCTION()
+	void AttackBeginEvent(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	UFUNCTION()
+	void AttackEndEvent(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	//受伤碰撞检测
 	UFUNCTION()
 	void BulletHitEvent(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 	//血量组件
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category="UI")
 	class UWidgetComponent* HPWidget;
 
-	//结构体
+	//AI属性结构体
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Stats")
 	FAIStats AIStats;
 
 	//受伤函数
 	void TakeBulletDamage(float Damage);
+
+	//攻击函数
+	void AttackGuard();
+	FTimerHandle AttackTimerHandle;
 };

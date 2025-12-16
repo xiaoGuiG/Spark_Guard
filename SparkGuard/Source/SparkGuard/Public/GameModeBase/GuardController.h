@@ -16,5 +16,12 @@ class SPARKGUARD_API AGuardController : public APlayerController
 public:
 	AGuardController();
 	virtual void BeginPlay() override;
+	//获取鼠标世界坐标
 	bool GetMouseWorldDirection(FVector& OutWorldDir);
+
+	//添加GuardUI
+	UPROPERTY(EditAnywhere,Category="UI")
+	TSubclassOf<UUserWidget> GuardUIClass;
+
+	UUserWidget* GuardUI;
 };

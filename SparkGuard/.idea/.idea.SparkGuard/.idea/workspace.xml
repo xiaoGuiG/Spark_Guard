@@ -8,12 +8,15 @@
     <list default="true" id="395ddcd0-3eea-460f-83c6-4b480c2859e1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/AI/BP_AI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/AI/BP_AI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/Bullets/BP_Bullet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/Bullets/BP_Bullet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/AI/BT_Enemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/AI/BT_Enemy.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/GameModeBase/BP_GuardController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/BluePrints/GameModeBase/BP_GuardController.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Characters/BP_GemStone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/Characters/BP_GemStone.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Maps/L_test.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/Maps/L_test.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Private/AI/AI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Private/AI/AI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Private/Bullet/Bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Private/Bullet/Bullet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Private/GameModeBase/GuardController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Private/GameModeBase/GuardController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Public/AI/AI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Public/AI/AI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Public/Bullet/Bullet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Public/Bullet/Bullet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Public/CharacterActors/GemstoneCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Public/CharacterActors/GemstoneCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Public/GameModeBase/GuardController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Public/GameModeBase/GuardController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SparkGuard/SparkGuard.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/SparkGuard.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,12 +26,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/AI/AIContro.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/AI/AISpawner.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/AI/BTService_FindPlayer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/Bullet/Bullet.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/CharacterActors/GemstoneCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Private/GameModeBase/GuardController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/AI.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/AIContro.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/AISpawner.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/BTService_FindPlayer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/AI/BTTask_FindPlayer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SparkGuard/Public/Bullet/Bullet.h" root0="FORCE_HIGHLIGHTING" />
@@ -307,7 +312,12 @@
       <workItem from="1765204661106" duration="3038000" />
       <workItem from="1765245307246" duration="1398000" />
       <workItem from="1765266356005" duration="1905000" />
-      <workItem from="1765272160531" duration="5708000" />
+      <workItem from="1765272160531" duration="6351000" />
+      <workItem from="1765340070693" duration="817000" />
+      <workItem from="1765340943400" duration="347000" />
+      <workItem from="1765347124203" duration="5642000" />
+      <workItem from="1765372875627" duration="368000" />
+      <workItem from="1765851689824" duration="6617000" />
     </task>
     <task id="LOCAL-00001" summary="新增玩家移动功能">
       <created>1764854190395</created>
@@ -344,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1765207659725</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="新增AI血量显示">
+      <created>1765283687743</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765283687743</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +387,7 @@
     <MESSAGE value="新增射击功能" />
     <MESSAGE value="新增AI功能" />
     <MESSAGE value="新增子弹碰撞检测" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增子弹碰撞检测" />
+    <MESSAGE value="新增AI血量显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增AI血量显示" />
   </component>
 </project>

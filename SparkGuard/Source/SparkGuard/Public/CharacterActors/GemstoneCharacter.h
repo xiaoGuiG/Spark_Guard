@@ -9,6 +9,17 @@
 /**
  * 
  */
+USTRUCT(BlueprintType)
+struct FGuardStats
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float MaxHP=10.f;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float CurrentHP=6.f;
+}; 
+ 
 UCLASS()
 class SPARKGUARD_API AGemstoneCharacter : public APaperCharacter
 {
@@ -44,4 +55,8 @@ public:
 
 	//获取子弹运动方向
 	FVector GetAttackDir();
+
+	//Guard属性结构体
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Stats")
+	FGuardStats GuardStats;
 };
