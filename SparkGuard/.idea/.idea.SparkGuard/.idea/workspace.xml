@@ -7,15 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="395ddcd0-3eea-460f-83c6-4b480c2859e1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SparkGuard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Maps/L_test.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/Maps/L_test.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Animations/AI/PF_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SparkGuard/Animations/AI/PF_Slime.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Textures/AI/Slime.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SparkGuard/Textures/AI/Slime_Sprite.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Private/AI/AI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Private/AI/AI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Private/AI/AISpawner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Private/AI/AISpawner.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Private/CharacterActors/GemstoneCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Private/CharacterActors/GemstoneCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Public/AI/AI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Public/AI/AI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/Public/CharacterActors/GemstoneCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/Public/CharacterActors/GemstoneCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SparkGuard/SparkGuardGameModeBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +314,8 @@
       <workItem from="1765851689824" duration="7279000" />
       <workItem from="1765866345670" duration="2263000" />
       <workItem from="1765876030593" duration="191000" />
-      <workItem from="1765876925889" duration="2723000" />
+      <workItem from="1765876925889" duration="3440000" />
+      <workItem from="1765940731537" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="新增玩家移动功能">
       <created>1764854190395</created>
@@ -369,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1765858558892</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="新增游戏结算">
+      <created>1765880822314</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765880822314</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +401,7 @@
     <MESSAGE value="新增子弹碰撞检测" />
     <MESSAGE value="新增AI血量显示" />
     <MESSAGE value="新增ai攻击与ai生成" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增ai攻击与ai生成" />
+    <MESSAGE value="新增游戏结算" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增游戏结算" />
   </component>
 </project>

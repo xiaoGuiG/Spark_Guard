@@ -65,4 +65,10 @@ public:
 	//获得生成AI类
 	UPROPERTY()
 	class AAISpawner* OwnerSpawner;
+
+	//AI动画
+	UPROPERTY(EditAnywhere)
+	class UPaperFlipbook* Run_PFB;
+	UPROPERTY(EditAnywhere)
+	UPaperFlipbook* Attack_PFB;
 };

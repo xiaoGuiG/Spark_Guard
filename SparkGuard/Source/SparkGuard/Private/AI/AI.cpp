@@ -70,6 +70,10 @@ void AAI::AttackBeginEvent(UPrimitiveComponent* OverlappedComponent, AActor* Oth
 	{
 		GetCharacterMovement()->MaxWalkSpeed=0;
 		GetWorldTimerManager().SetTimer(AttackTimerHandle,this,&AAI::AttackGuard,1.f,true);
+		if(Attack_PFB)
+		{
+			GetSprite()->SetFlipbook(Attack_PFB);
+		}
 	}
 }
 
@@ -79,6 +83,10 @@ void AAI::AttackEndEvent(UPrimitiveComponent* OverlappedComponent, AActor* Other
 	{
 		GetCharacterMovement()->MaxWalkSpeed=100.f;
 		GetWorldTimerManager().ClearTimer(AttackTimerHandle);
+		if(Run_PFB)
+		{
+			GetSprite()->SetFlipbook(Run_PFB);
+		}
 	}
 }
 
